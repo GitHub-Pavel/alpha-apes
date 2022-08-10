@@ -1,0 +1,75 @@
+@import "../../variables.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 20px 0;
+  pointer-events: all;
+  background: $Yellow;
+
+  &__ham {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(18, 18, 18, .15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $extra-less) {
+      width: 48px;
+      height: 48px;
+    } 
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+
+    @media (max-width: 1180px) {
+      grid-template-columns: .6fr max-content 1fr;
+    }
+
+    @media (max-width: $md) {
+      grid-template-columns: 60px max-content 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: $xs) {
+      grid-template-columns: 1fr max-content 60px;
+    }
+  }
+
+  &__column_logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__column_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__column_contacts {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__contacts {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: $xs) {
+      grid-template-columns: max-content;
+      gap: 0px;
+    }
+  }
+}

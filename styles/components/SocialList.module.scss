@@ -1,0 +1,26 @@
+@import "../variables.scss";
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-grid;
+  gap: 10px; 
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $Black;
+  transition: color .2s ease-in-out;
+  pointer-events: all;
+
+  &:hover {
+    color: $Cherry;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}

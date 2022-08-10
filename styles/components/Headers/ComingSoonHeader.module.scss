@@ -1,0 +1,33 @@
+@import "../../variables";
+
+.header{
+  &__comingsoon{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    z-index: 10;
+    @media (max-width: $xxl) {
+      padding-top: 40px;
+    }
+    @media (max-width: $lg) {
+      padding-top: 60px;
+    }
+    @media (max-width: $sm) {
+      padding-top: 40px;
+    }
+    &_image{
+      display: flex;
+      justify-content: center;
+      @media (max-width: $xxl) {
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: $lg) {
+        max-width: 295px;
+      }
+    }
+  }
+}

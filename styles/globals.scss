@@ -1,0 +1,118 @@
+@import "globals/mixins";
+@import "globals/fonts";
+@import "globals/variables";
+@import "globals/text";
+/*
+ * ==================================================================================
+ * reset
+ * ==================================================================================
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, .img {
+  max-width: 100%;
+  height: auto;
+
+  &-fluid {
+    width: 100%;
+    height: auto;
+  }
+
+  &-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 175%;
+  @media (max-width: $xxl) {
+    font-size: 14px;
+  }
+  @media (max-width: $sm) {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.container {
+  max-width: calc( var(--container-width) + var(--container-side-padding) * 2 );
+  padding-right: var(--container-side-padding);
+  padding-left: var(--container-side-padding);
+  margin: 0 auto;
+  width: 100%;
+
+  &-large {
+    max-width: calc( var(--container-width-large) + var(--container-side-padding) * 2 );
+    padding-right: var(--container-side-padding);
+    padding-left: var(--container-side-padding);
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &-fluid {
+    padding-right: var(--container-side-padding);
+    padding-left: var(--container-side-padding);
+    width: 100%;
+  }
+}
+
+#site {
+  overflow-x: hidden;
+  position: relative;
+  min-width: 320px;
+}
+
+.hamburger-react {
+  pointer-events: all;
+  color: $Black;
+}

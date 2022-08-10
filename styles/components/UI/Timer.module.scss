@@ -1,0 +1,113 @@
+@import "../../variables.scss";
+
+.timer {
+  border-radius: 90px;
+  width: 480px;
+  height: 130px;
+  background: $Black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: $lg ) {
+    height: 100px;
+    width: 380px;
+  }
+
+  @media (max-width: $less) {
+    width: 342px;
+  }
+  
+  @media (max-width: $extra-less) {
+    width: 280px;
+    height: 80px;
+  }
+
+  &__time {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &box {
+      width: 120px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $White;
+      border-radius: 60px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__item {
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+
+    @media (max-width: $lg ) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (max-width: $extra-less) {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 5px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 20px; 
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $white;    
+
+    @media (max-width: $lg ) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  &__desc {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: $White;
+    opacity: 0.5;
+    margin-top: 5px;
+
+    @media (max-width: $lg ) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+
+    @media (max-width: $extra-less) {
+      margin-top: 0;
+    }
+  }
+}

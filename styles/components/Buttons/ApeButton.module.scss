@@ -1,0 +1,185 @@
+@import "../../variables.scss";
+
+.button {
+  height: 130px;
+  width: 480px;
+  background: $Black;
+  border-radius: 90px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  pointer-events: all;
+
+  @media (max-width: $lg ) {
+    width: 380px;
+    height: 100px;
+  }
+
+  @media (max-width: $less) {
+    width: 342px;
+  }
+
+  @media (max-width: $extra-less) {
+    width: 280px;
+    height: 80px;
+  }
+
+  &__title {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $White;
+
+    @media (max-width: $lg ) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (max-width: $extra-less) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &_alone {
+      max-width: 180px;
+      line-height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (max-width: $lg ) {
+        max-width: 150px;
+      }
+
+      @media (max-width: $extra-less) {
+        max-width: 130px;
+      }
+    }
+  }
+
+  &__desc {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 210px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: $White;
+    opacity: 0.5; 
+
+    @media (max-width: $lg ) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    @media (max-width: $extra-less) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &__content {
+    max-width: 247px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: $lg ) {
+      max-width: 200px;
+    }
+
+    @media (max-width: $less) {
+      max-width: 198px;
+      margin-right: -10px;
+    }
+
+    @media (max-width: $extra-less) {
+      max-width: 180px;
+      margin-right: -15px;
+    }
+
+    &_alone {
+      max-width: 250px;
+
+      @media (max-width: $lg ) {
+        max-width: 210px;
+      }
+
+      @media (max-width: $less) {
+        max-width: 200px;
+      }
+
+      @media (max-width: $extra-less) {
+        max-width: 175px;
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 190px;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: $lg ) {
+      width: 143px;
+    }
+
+    @media (max-width: $less) {
+      width: 136px;
+    }
+
+    @media (max-width: $extra-less) {
+      width: 110px;
+    }
+
+    & > span {
+      position: absolute !important;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 90px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 400px);
+      left: calc(50% - 400px);
+      width: 800px;
+      height: 800px;
+      border-radius: 400px;
+      background: $Cherry;
+      transform: scale(0.1) translateY(2rem);
+      transition: transform .3s linear;
+      transform-origin: 50% 33%;
+    }
+  }
+
+  &:hover {
+    @media (min-width: $md) {
+      .button__bg::after {
+        transform: scale(1) translateY(0);
+        transform-origin: 50% 66%;
+        transition: transform .7s cubic-bezier(0.54, 0.005, 0.155, 0.99);
+      }
+    }
+  }
+}

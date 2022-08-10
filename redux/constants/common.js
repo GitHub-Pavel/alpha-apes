@@ -1,0 +1,6 @@
+export const SET_STEP_LOADING = "SET_STEP_LOADING";
+export const SET_LOADING = "SET_LOADING";
+export const SET_SECTIONS = "SET_SECTIONS";
+export const SET_CURRENT_SECTION = "SET_CURRENT_SECTION";
+export const SET_CURRENT_TYPE = "SET_CURRENT_STEP";
+export const SET_MENU = "SET_MENU";

@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+
+.list {
+  display: grid;
+  gap: 60px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: $lg ) {
+    gap: 50px;
+  }
+}
+
+.button {
+  overflow: hidden;
+  transform: scaleY(0.5);
+  position: relative;
+  padding: 6px 0;
+  pointer-events: all;
+
+  &::before {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: $Cherry;
+    transition: all .2s ease-in-out;
+  }
+
+  &_active {
+    &::before {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  &__box {
+    display: block;
+    transform: scaleY(2) translateY(25%);
+    transition: transform .2s linear;
+  }
+
+  &__black,
+  &__cherry {
+    display: block;
+  }
+
+  &__black {
+    color: $Black;
+  }
+
+  &__cherry {
+    color: $Cherry;
+  }
+
+  &:hover {
+    .button__box {
+      transform: scaleY(2) translateY(-25%);
+    }
+  }
+}

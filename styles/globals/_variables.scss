@@ -1,0 +1,78 @@
+/*
+ * ==================================================================================
+ * SCSS
+ * ==================================================================================
+ */
+
+$Montserrat: "Montserrat",  Helvetica Neue, sans-serif;
+//$Inter: "Inter", sans-serif;
+
+$grey: #848484;
+$grey_light:#F6F6F6;
+$grey_line: #E8E8E8;
+$black: #1D1D1D;
+$white: #fff;
+$green: #4BB14B;
+$blue: #2E2E82;
+$blue_2: #4F4FAD;
+$orange: #FF6600;
+$Turquoise: #00CCFF;
+$purple: #A84CF0;
+$yellow: #FFC107;
+
+$Black: #121212;
+$Cherry: #DC41A0;
+$White: #fff;
+
+
+/*
+ * ==================================================================================
+ * Windows size
+ * ==================================================================================
+ */
+
+$extra-less: 360px;
+$less: 390px;
+$xx: 480px;
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1280px;
+$xxl: 1512px;
+
+$array_sizes: (
+  ( 'none', 'none' ),
+  ( $less, 'less' ),
+  ( $xx, 'xx' ),
+  ( $xs, 'xs' ),
+  ( $sm, 'sm' ),
+  ( $md, 'md' ),
+  ( $lg, 'lg' ),
+  ( $xxl, 'xxl' ),
+);
+
+/*
+ * ==================================================================================
+ * Root
+ * ==================================================================================
+ */
+
+:root {
+  --white: #fff;
+
+  --container-side-padding: 60px;
+  
+  --container-width: 1000px;
+  --container-width-large: 1520px;
+
+  --min-width-content: 320px;
+
+  @media (max-width: $lg ) {
+    --container-side-padding: 50px;
+    --container-width: 780px;
+  }
+
+  @media (max-width: $md) {
+    --container-side-padding: 24px;
+  }
+}
